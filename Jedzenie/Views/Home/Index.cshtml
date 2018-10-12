@@ -1,0 +1,64 @@
+﻿@model List<Models.Website>
+
+@{
+    ViewBag.Title = "Oferta";
+}
+
+<div class="cols">
+    <div class="left-col">
+
+        @foreach (var web in Model)
+        {
+            <div class="web">
+                <div class="web-name">
+                    Menu z @web.Url
+                </div>
+                @foreach (var cat in web.Categories)
+                {
+                    <div class="category">
+                        <div class="category-name">
+                            @cat.CategoryName
+                        </div>
+                        @foreach (var dish in cat.Dishes)
+                        {
+                            if (dish.Day == DateTime.Now.DayOfWeek || dish.Day == 0)
+                            {
+                                <div class="dish">
+                                    <div class="dish-name">@dish.Name</div>
+
+                                    <div class="dish-price">
+                                        <div>@Ajax.ActionLink(dish.Price.ToString()+"zł +", "AddToCart", "Home", new { id = dish.Id },
+                                            new AjaxOptions { HttpMethod = "GET",
+                                                InsertionMode = InsertionMode.Replace,
+                                                UpdateTargetId = "lol"
+                                            }, 
+                                            new { @class = "order" })</div>
+                                    </div>
+
+
+                                    @if (@dish.Description != null)
+                                    {
+                                        <div class="dish-desc">@dish.Description</div>
+                                    }
+
+
+                                </div>
+                            }
+                        }
+                        <br />
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="right-col">
+        <div id="lol">
+
+        </div>
+        <div id="cart-person">
+
+        </div>
+    </div>
+</div>
+

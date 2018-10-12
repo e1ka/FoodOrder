@@ -1,0 +1,41 @@
+﻿@model List<Models.Order>
+@{
+    ViewBag.Title = "AdminPanel";
+}
+<div class="ad-container">
+    <div class="ad-header">
+        <div class="refresh">
+            <span class="ref">&#8635</span>
+            @Ajax.ActionLink(" ", "Refresh", "Home", new AjaxOptions { HttpMethod = "GET" }, new { @class = "ad-refresh" });
+        </div>
+        <div class="ad-note">Aktualizuj menu</div>
+    </div>
+
+
+    <div class="ad-orders">
+        @foreach (var item in Model)
+        {
+            <div class="ad-order">
+                <div class="ad-order-data">
+                    <div class="ad-order-surname">@item.Name @item.Surname</div>
+                    <div class="ad-order-address">@item.Address</div>
+                    <div class="ad-order-price">@item.Price</div>
+                <div class="ad-order-realize">@Html.ActionLink("Zrealizuj", "AcceptOrder", "Home", new { id = item.Id }, new { @class = "realize" })</div>
+          
+                </div>
+
+                @foreach (var dish in item.Orders)
+                {
+
+                <div class="ad-ordered-dish">
+                    <div class="ad-ordered-dish-name">@dish.Dish.Name</div>
+                    <div class="ad-ordered-dish-quantity">@dish.Quantity</div>
+                </div>
+                
+
+                }
+            </div>
+
+        }
+    </div>
+</div>

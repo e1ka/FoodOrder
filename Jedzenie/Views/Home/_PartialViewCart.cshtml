@@ -1,0 +1,44 @@
+﻿@{ 
+    decimal sumOfAll = 0;
+}
+
+<div id="lol">
+ @if (ViewBag.CartItems != null)
+ {
+      <div class="cart-top">KOSZYK</div>
+         <div class="cart">
+             @foreach (KeyValuePair<Models.Dish, int>
+                 item in ViewBag.CartItems)
+                 {
+                 <div class="cart-dish">
+                     <div class="cart-dish-quantity">
+                         x @item.Value
+                     </div>
+                     <div class="cart-dish-name">
+                         @item.Key.Name
+                     </div>
+                     <div class="cart-dish-price">
+                         @{
+                             decimal suma = item.Key.Price * item.Value;
+                             sumOfAll += suma;
+                         }
+                         @suma
+                     </div>
+                 </div>
+                 }
+         </div>
+         <div class="cart-bottom">
+             <div>
+                 @Ajax.ActionLink("x", "ClearCart", "Home",
+                                         new AjaxOptions
+                                         {
+                                             HttpMethod = "GET",
+                                             InsertionMode = InsertionMode.Replace,
+                                             UpdateTargetId = "lol"
+                                         },
+                                         new { @class = "cart-delete" })
+             </div>
+             @Html.ActionLink(@sumOfAll+"zł", "Order", "Home", new { @class = "cart-order" }) 
+         </div>
+         }
+</div>

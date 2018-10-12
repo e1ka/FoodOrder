@@ -1,0 +1,347 @@
+﻿body {
+    background: url('images/Rysunek-5.png') no-repeat;
+    background-size: contain;
+    font-family: 'Lora', serif;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+}
+html{
+    background-color: rgba(192, 192, 192, 0.2);
+    height:100%;
+}
+.container{
+    overflow:hidden;
+    background-size: contain;
+   
+}
+.cols{
+    overflow:hidden;
+    margin: 10vh 15vw 10vh 15vw;
+    box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.3);
+    background-color: white;
+
+}
+.left-col{
+     float: left;
+     width: 60%;
+     color: black;
+     overflow-y: scroll;
+     height:80vh;
+}
+.right-col{
+    overflow:hidden;
+    float: left;
+    width: 40%;
+    height:80vh;
+    background: url('images/p8.jpg') no-repeat;
+    background-size:contain;
+}
+
+.web{
+    display:inline-block;
+    margin-top: 2em;
+    align-content: center;
+    width: 100%;
+}
+.web-name{
+    font-size: 1.3vh;
+    text-align: center;
+    margin-bottom:2em;
+    width: 75%;
+    padding-right: 25%;
+}
+.category{
+    float:left;
+    width: 100%;
+}
+.category-name{
+    font-size: 2vh;
+    text-align: center;
+    width: 75%;
+    padding-right:25%;
+    color:#e71285;
+    padding-bottom: 0.5em;
+}
+.dish{
+    transition: all .5s;
+    width: 100%;
+    padding: 1vh 0vh 1vh 0vh;
+    min-height: 6vh;
+    text-align: center;
+    color: #4d4d4d;
+}
+.dish:hover{
+    background-color:#ffdb19;
+    color: #4d4d4d;
+}
+.dish-name{
+    font-size: 1.6vh;
+    float: left;
+    padding-left: 5%;
+    padding-bottom: 0.3em;
+    width: 65%;
+}
+.dish-desc{
+    font-size: 1.2vh;
+    word-spacing: 0.25em;
+    float: left;
+    padding-left: 5%;
+    width: 65%;
+}
+.dish-price{
+    float: right;
+    font-size: 1.6vh;
+    width: 30%;
+    text-align: center;
+}
+.order {
+    margin-top:10%;
+    text-decoration:none;
+    display: inline-block;
+    text-align: center;
+	letter-spacing: .1em;
+	transition: all .5s;
+    color: black;
+    
+}
+.order:hover{
+    text-decoration:none;
+    color: white;
+}
+.a{
+    text-decoration:none;
+}
+.cart-top{
+    padding: 0.2em 0em 0.2em 0em;
+    font-size:2vh;
+    text-align:center;
+    width:60%;
+    margin-top:15%;
+    border-radius: 0em 2em 0em 0em;
+    color:white;
+    background-color: #e71285;
+    letter-spacing: 0.5vw;
+}
+.cart{
+    color: #4d4d4d;
+    overflow-y: scroll;
+    width:60%;
+    background-color: rgbA(255, 255, 255, 0.6);
+    min-height:10vh;
+    max-height:30vh;
+}
+.cart::-webkit-scrollbar { 
+    display: none; 
+}
+.cart-dish{
+    display: inline-block;
+    width:100%;
+    padding-bottom: 1.5em;
+}
+.cart-dish-quantity{
+    float:left;
+    width:15%;
+}
+.cart-dish-name{
+    float:left;
+    width:60%;
+}
+.cart-delete{
+    font-size:2vh;
+    padding: 0.2em 0em 0.2em 0em;
+    color: #4d4d4d;
+    text-decoration:none;
+    text-align:center;
+    float:left;
+    width:10%;
+    background-color: #ffdb19;
+}
+.cart-delete:hover{
+    color:white;
+    background-color: #2ecaff;
+    }
+.cart-order{
+    border-radius: 0em 0em 2em 0em;
+    float:left;
+    width:50%;
+    text-align:center;
+    text-decoration:none;
+    background-color: #ffdb19;
+    color: #4d4d4d;
+    font-size:2vh;
+    letter-spacing: 0.2em;
+    padding: 0.2em 0em 0.2em 0em;
+}
+.cart-order:hover{
+    color:white;
+    background-color: #2ecaff;
+}
+
+.order-content{
+    text-align:center;
+    overflow:hidden;
+    margin: 5% 55% 5% 15%;
+    min-height:50em;
+    box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.3);
+    background-color: white;
+}
+.order-header{
+    font-weight:100;
+    font-size: 2.5vh;
+    padding:15% 0% 10% 0%;
+    color:#2ecaff;
+}
+.form-group{
+    width:100%;
+    display:inline-block;
+    margin-bottom: 5%;
+}
+.control-label{
+    font-size: 2.0vh;
+    width:100%;
+    display:inline-block;
+}
+.form-control{
+    font-size: 1.8vh;
+    width:50%;
+    margin: 0% 25% 0% 25%;
+}
+.order-btn{
+    margin-top: 1vh;
+    font-size: 2.0vh;
+    color:#ffdb19;
+    border:none;
+    background-color: transparent;
+    cursor:pointer;
+}
+.order-btn:hover{
+    color:#2ecaff;
+}
+
+.ad-container{
+    text-align:center;
+    overflow-y:scroll;
+    margin: 3% 15% 3% 15%;
+    height:90vh;
+    box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.3);
+    background-color: white;
+}
+.ref{
+    margin: 0px;
+    position:absolute;
+    border-radius: 50%;
+    background-color: #2ecaff;
+    width:4vh;
+    height:4vh;
+}
+.refresh{
+    width:4vh;
+    height:4vh;
+    border-radius: 50%;
+    color: white;
+    font-size: 3vh;
+    text-align:center;
+    float:left;
+}
+.ad-refresh:hover{
+    background-color:rgbA(255, 255, 255, 0.6);
+}
+.ad-refresh{
+    position:absolute;
+    text-decoration: none;
+    width:4vh;
+    height:4vh;
+    border-radius: 50%;
+}
+.ad-note{
+    float:left;
+    justify-content:center;
+    font-size: 2vh;
+    margin: 0.5em 0em 2em 2em;
+}
+.ad-header{
+    margin: 2% 0% 15% 5%;
+    align-content:center;
+}
+.ad-orders{
+    display: inline-block;
+    width:100%;
+    
+}
+.ad-order{
+    padding-bottom:2em;
+    border-top: solid 0.5px lightgray;  
+}
+.ad-order:hover{
+    background-color:#ffdb19;
+}
+.ad-order-data{
+    display: inline-block;
+    width:100%;
+}
+.ad-order-surname{
+    float:left;
+    width: 30%;
+    text-align:center;
+    font-size: 1.5vh;
+    align-content:center;
+    justify-content:center;
+    padding-top: 1vh;
+    padding-bottom:1vh;
+}
+.ad-order-address{
+    float:left;
+    width:40%;
+    text-align:center;
+    align-content:center;
+    justify-content:center;
+    padding-top: 1vh;
+    padding-bottom:1vh;
+}
+.ad-order-price{
+    float:left;
+    width:10%;
+    text-align:center;
+    align-content:center;
+    justify-content:center;
+    padding-top: 1vh;
+    padding-bottom:1vh;
+
+}
+.ad-order-realize {
+    float: left;
+    width: 20%;
+    text-align: right;
+    text-decoration: none;
+}
+.realize{
+    padding: 1em 0em 1em 0em;
+    margin-right:10%;
+    text-decoration:none;
+    display: inline-block;
+	text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5vmin;
+	color: black;
+    font-weight: 100;
+	letter-spacing: .1em;
+	transition: all .5s;
+}
+.realize:hover{
+    text-decoration:none;
+    color: white;
+}
+.ad-ordered-dish{
+    display:inline-block;
+    width:70%;
+}
+.ad-ordered-dish-name{
+    width: 70%;
+    float:left;
+    text-align:center;
+}
+.ad-ordered-dish-quantity{
+    width: 30%;
+    float:left;
+}
